@@ -4,92 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <title>GoutmeTech</title>
 </head>
 
 <body>
+    <!----------------------------Header-------------------------->
     <header>
-        <!------------------------Section 1------------------------->
+    <!--------------------------Section 1------------------------->
         <section>
             <h1>GourmeTech</h1>
             <article class="navbar-header"></article>
             <nav class="navbar">
+                <header>
+                    <div class="logo">G</div>
+                    <h1>GourmeTech</h1>
+                    <div class="menu-icon">☰</div>
+                </header>
+            
                 <div class="nav-links">
                     <a href="#">Accueil</a>
                     <a href="#">Ajouter une recette</a>
                     <a href="#">Mes favoris</a>
                     <a href="#">À propos</a>
                 </div>
-                <div class="nav-icons">
-                    <img src="https://via.placeholder.com/24x24?text=🌙" alt="Mode sombre">
-                    <img src="https://via.placeholder.com/24x24?text=☰" alt="Menu">
-                </div>
             </nav>
             </article>
         </section>
     </header>
-    
-    <body>
-        <!------------------------Section 2------------------------->
+    <!-------------------------------Main---------------------------->
+    <main>
+    <!-----------------------------Section 2------------------------->
         <section>
-            <article class="search-form-container">
+            <article class="form-recherche">
                 <form>
                     <!-- Champ de recherche -->
-                    <div class="search-input">
+                    <div class="barre-de-recherche">
                         <input type="text" placeholder="Rechercher une recette...">
                     </div>
-    
+
                     <!-- Bouton Rechercher -->
                     <div class="search-button">
                         <button type="submit">Rechercher</button>
                     </div>
-    
-                    <!-- Section Catégorie -->
-                    <div class="filter-section">
+
+                    <!-- Section Categorie -->
+                    <div class="filtres">
                         <h3>Catégorie</h3>
-                        <label><input type="checkbox" name="category" value="entree"> Entrée</label>
-                        <label><input type="checkbox" name="category" value="plat"> Plat</label>
-                        <label><input type="checkbox" name="category" value="dessert"> Dessert</label>
-                    </div>
-    
-                    <!-- Section Temps -->
-                    <div class="filter-section">
+                        <label><input type="checkbox"> Entrée</label>
+                        <label><input type="checkbox"> Plat</label>
+                        <label><input type="checkbox"> Dessert</label>
                         <h3>Temps</h3>
-                        <label><input type="checkbox" name="time" value="rapide"> Rapide</label>
-                        <label><input type="checkbox" name="time" value="moyen"> Moyen</label>
-                        <label><input type="checkbox" name="time" value="long"> Long</label>
+                        <label><input type="checkbox"> Rapide</label>
+                        <label><input type="checkbox"> Moyen</label>
+                        <label><input type="checkbox"> Long</label>
                     </div>
                 </form>
             </article>
-        </section>
-    <!------------------------Section 3------------------------->
-        <section>
-            <article class="recipe-card">
+
+
+            <!------------------------Tarte aux pommes------------------------->
+            <article class="recette-card">
                 <!-- Image de la recette -->
                 <div class="recipe-image">
-                    <img src="./img/Tarte aux pommes.jpeg" alt="Tarte aux pommes">
+                    <img src="./assets/img/Tarte aux pommes.jpeg" alt="Tarte aux pommes">
                     <div class="favorite-icon">
                         <img src="https://via.placeholder.com/20x20?text=♥" alt="Favori">
                     </div>
                 </div>
-        
                 <!-- Contenu de la carte -->
                 <div class="recipe-content">
                     <h3>Tarte aux pommes</h3>
                     <div class="recipe-tags">
-                        <span class="tag-dessert">Dessert</span>
-                        <span class="tag-time">60 min</span>
-                        <span class="tag-difficulty">Facile</span>
+                        <a href="#" class="dessert">Dessert</a>
+                        <a href="#" class="60min">60 min</a>
+                        <a href="#" class="facile">Facile</a>
                     </div>
-                    <a href="#" class="recipe-button">Voir la recette</a>
+                    <a href="./recette.html" class="recette-button">Voir la recette</a>
+                </div>
+                <div class="recipe-image">
+                    <img src="./img/Ratatouille.jpeg" alt="Ratatouille Provencale">
+                    <div class="favorite-icon">
+                        <img src="https://via.placeholder.com/20x20?text=♥" alt="Favori">
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------Ratatouille Provencale------------------------->
+
+            <article class="recette-card">
+                <!-- Image de la recette -->
+                <div class="recipe-image">
+                    <img src="./assets/img/Ratatouille.jpeg" alt="ratatouille provencale">
+                    <div class="favorite-icon">
+                        <img src="https://via.placeholder.com/20x20?text=♥" alt="Favori">
+                    </div>
+                </div>
+                <!-- Contenu de la carte -->
+                <div class="recipe-content">
+                    <h3>Tarte aux pommes</h3>
+                    <div class="recipe-tags">
+                        <a href="#" class="dessert">Dessert</a>
+                        <a href="#" class="60min">60 min</a>
+                        <a href="#" class="facile">Facile</a>
+                    </div>
+                    <a href="./recette.html" class="recette-button">Voir la recette</a>
+                </div>
+                <div class="recipe-image">
+                    <img src="./img/Ratatouille.jpeg" alt="Ratatouille Provencale">
+                    <div class="favorite-icon">
+                        <img src="https://via.placeholder.com/20x20?text=♥" alt="Favori">
+                    </div>
+                </div>
+            </article>
+
+            <!------------------------Veloute de potiron------------------------->
+
+            <article class="recette-card">
+                <!-- Image de la recette -->
+                <div class="recipe-image">
+                    <img src="./assets/img/Veloute de potiron.jpeg" alt="veloute de potiron">
+                    <div class="favorite-icon">
+                        <img src="https://via.placeholder.com/20x20?text=♥" alt="Favori">
+                    </div>
+                </div>
+                <!-- Contenu de la carte -->
+                <div class="recipe-content">
+                    <h3>Veloute de potiron</h3>
+                    <div class="recipe-tags">
+                        <a href="#" class="dessert">Dessert</a>
+                        <a href="#" class="60min">60 min</a>
+                        <a href="#" class="facile">Facile</a>
+                    </div>
+                    <a href="./recette.html" class="recette-button">Voir la recette</a>
+                </div>
+                <div class="recipe-image">
+                    <img src="./img/Ratatouille.jpeg" alt="Ratatouille Provencale">
+                    <div class="favorite-icon">
+                        <img src="https://via.placeholder.com/20x20?text=♥" alt="Favori">
+                    </div>
                 </div>
             </article>
         </section>
-
-
-    </body>
+    </main>
     <footer>
-
+        <a href="#" class="droit">©️GourmeTech - Tous droits reserves</a>
     </footer>
 </body>
 
