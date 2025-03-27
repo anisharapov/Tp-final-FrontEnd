@@ -1,0 +1,389 @@
+:root {
+    --primary: #ff8c00; /* Orange pour les titres et boutons */
+    --text: #333;
+    --bg: #f5f5f5;
+    --card: #fff;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --radius: 10px;
+    --font: Arial, sans-serif;
+    --fs-head: 24px;
+    --fs-sub: 18px;
+    --space: 15px;
+    --dark-bg: #1a1a1a;
+    --dark-text: #e0e0e0;
+    --dark-card: #2a2a2a;
+    --dark-border: #444;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    font-family: var(--font);
+    color: var(--text);
+    transition: all 0.3s ease;
+    line-height: 1.6; /* Améliore la lisibilité du texte */
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    padding: var(--space);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .theme-toggle {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .logo {
+    font: bold 24px var(--font);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Nav */
+nav ul {
+    display: flex;
+    gap: var(--space);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body.dark-mode nav {
+    background: var(--primary);
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    padding: var(--space);
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: var(--space);
+}
+
+.section.active {
+    display: block;
+}
+
+/* Recette Details */
+.recette-details {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: calc(var(--space) * 2);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.dark-mode .recette-details {
+    background: var(--dark-card);
+}
+
+/* Recette Header */
+.recette-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space);
+}
+
+.recette-header h1 {
+    font-size: var(--fs-head);
+    color: var(--primary);
+}
+
+body.dark-mode .recette-header h1 {
+    color: var(--dark-text);
+}
+
+/* Bouton Favoris */
+.favorite-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+body.dark-mode .favorite-btn {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.favorite-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+body.dark-mode .favorite-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.favorite-btn .heart-icon {
+    font-size: 20px;
+    color: #ff4d4d;
+}
+
+.favorite-btn.active .heart-icon {
+    content: "♥";
+}
+
+/* Contenu de la recette */
+.recette-details h2 {
+    font-size: var(--fs-sub);
+    color: var(--primary);
+    margin-top: calc(var(--space) * 2);
+    margin-bottom: var(--space);
+}
+
+body.dark-mode .recette-details h2 {
+    color: var(--dark-text);
+}
+
+.recette-details h3 {
+    font-size: 16px;
+    color: var(--text);
+    margin-top: var(--space);
+    margin-bottom: 10px;
+}
+
+body.dark-mode .recette-details h3 {
+    color: var(--dark-text);
+}
+
+.recette-details ul,
+.recette-details ol {
+    margin-left: calc(var(--space) * 2);
+    margin-bottom: var(--space);
+}
+
+.recette-details li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.recette-details p {
+    font-size: 14px;
+    margin-bottom: var(--space);
+}
+
+/* Footer */
+footer {
+    background: var(--card);
+    padding: var(--space);
+    border-top: 1px solid #ddd;
+}
+
+body.dark-mode footer {
+    background: var(--dark-card);
+    border-top-color: var(--dark-border);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+body.dark-mode .footer-column h4 {
+    color: var(--dark-text);
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+body.dark-mode .footer-column p {
+    color: var(--dark-text);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+body.dark-mode .footer-column ul li a {
+    color: var(--dark-text);
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: var(--space);
+}
+
+body.dark-mode .footer-copyright {
+    color: var(--dark-text);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header {
+        min-height: 60px;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        z-index: 1000;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: var(--space);
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .recette-details {
+        padding: var(--space);
+    }
+
+    .recette-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recette-header h1 {
+        margin-bottom: var(--space);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: var(--space);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    header .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .footer-container {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1025px) {
+    header .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .footer-container {
+        flex-direction: row;
+    }
+}

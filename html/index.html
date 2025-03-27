@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GourmeTech</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/code.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo" aria-label="Retour à la page d'accueil de GourmeTech">GourmeTech</a>
+        <button class="hamburger" aria-label="Ouvrir le menu de navigation" aria-expanded="false">☰</button>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="#recettes" class="nav-link" data-section="recettes" aria-current="page">Recettes</a></li>
+                <li><a href="#favoris" class="nav-link" data-section="favoris">Mes Favoris</a></li>
+                <li><a href="#apropos" class="nav-link" data-section="apropos">À propos</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" aria-label="Basculer entre le mode clair et sombre">🌙</button>
+    </header>
+
+    <main>
+        <section id="recettes" class="section active" aria-labelledby="recettes-heading">
+            <div class="recherche-section">
+                <h1 id="recettes-heading">Rechercher une recette</h1>
+                <form class="barre-de-recherche" role="search" aria-label="Rechercher une recette">
+                    <label for="search-input" class="visually-hidden">Rechercher une recette</label>
+                    <input type="search" id="search-input" placeholder="Rechercher une recette">
+                    <button type="submit">Rechercher</button>
+                </form>
+                <div class="filtres" role="group" aria-label="Filtres de recherche">
+                    <label for="category-filter" class="visually-hidden">Catégorie</label>
+                    <select id="category-filter">
+                        <option value="">Catégorie</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="plat">Plat</option>
+                        <option value="entree">Entrée</option>
+                    </select>
+                    <label for="time-filter" class="visually-hidden">Temps de préparation</label>
+                    <select id="time-filter">
+                        <option value="">Temps de préparation</option>
+                        <option value="rapide">Rapide (30 min)</option>
+                        <option value="moyen">Moyen (60 min)</option>
+                        <option value="long">Long (60+ min)</option>
+                    </select>
+                    <label for="difficulty-filter" class="visually-hidden">Difficulté</label>
+                    <select id="difficulty-filter">
+                        <option value="">Difficulté</option>
+                        <option value="facile">Facile</option>
+                        <option value="moyen">Moyen</option>
+                        <option value="difficile">Difficile</option>
+                    </select>
+                </div>
+            </div>
+            <div class="recettes" role="list" aria-label="Liste des recettes">
+                <article class="recette-card" data-id="1" role="listitem">
+                    <div class="recette-image">
+                        <img src="../assets/img/Tarte aux pommes.jpeg" alt="Tarte aux pommes">
+                        <button class="favorite-btn" data-id="1" aria-label="Ajouter Tarte aux pommes aux favoris">
+                            <span class="heart-icon">♡</span>
+                        </button>
+                    </div>
+                    <h2>Tarte aux pommes</h2>
+                    <div class="recipe-tags">
+                        <span class="tag category">Dessert</span>
+                        <span class="tag time">45 min</span>
+                    </div>
+                    <a href="./recette.html" class="recette-button">Voir la recette</a>
+                    <button class="ajouter-button">Ajouter une recette</button>
+                </article>
+                <article class="recette-card" data-id="2" role="listitem">
+                    <div class="recette-image">
+                        <img src="../assets/img/Ratatouille.jpeg" alt="Ratatouille provençale">
+                        <button class="favorite-btn" data-id="2" aria-label="Ajouter Ratatouille provençale aux favoris">
+                            <span class="heart-icon">♡</span>
+                        </button>
+                    </div>
+                    <h2>Ratatouille provençale</h2>
+                    <div class="recipe-tags">
+                        <span class="tag category">Plat</span>
+                        <span class="tag time">60 min</span>
+                    </div>
+                    <a href="./recette.html" class="recette-button">Voir la recette</a>
+                    <button class="ajouter-button">Ajouter une recette</button>
+                </article>
+                <article class="recette-card" data-id="3" role="listitem">
+                    <div class="recette-image">
+                        <img src="../assets/img/Veloute de potiron.jpeg" alt="Velouté de potiron">
+                        <button class="favorite-btn" data-id="3" aria-label="Ajouter Velouté de potiron aux favoris">
+                            <span class="heart-icon">♡</span>
+                        </button>
+                    </div>
+                    <h2>Velouté de potiron</h2>
+                    <div class="recipe-tags">
+                        <span class="tag category">Entrée</span>
+                        <span class="tag time">30 min</span>
+                    </div>
+                    <a href="./recette.html" class="recette-button">Voir la recette</a>
+                    <button class="ajouter-button">Ajouter une recette</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="favoris" class="section" aria-labelledby="favoris-heading">
+            <h1 id="favoris-heading">Mes Favoris</h1>
+            <div class="recettes favoris-list" role="list" aria-label="Liste des recettes favorites"></div>
+        </section>
+
+        <section id="apropos" class="section" aria-labelledby="apropos-heading">
+            <h1 id="apropos-heading">À propos de GourmeTech</h1>
+            <p>GourmeTech est une plateforme de recettes culinaires interactives développée dans le cadre d’un projet pédagogique.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <nav class="footer-column footer-nav" aria-label="Navigation du pied de page">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="#" class="nav-link" data-section="accueil">Accueil</a></li>
+                    <li><a href="#" class="nav-link" data-section="ajouter">Ajouter une recette</a></li>
+                    <li><a href="#" class="nav-link" data-section="favoris">Mes Favoris</a></li>
+                    <li><a href="#" class="nav-link" data-section="apropos">À propos</a></li>
+                </ul>
+            </nav>
+            <aside class="footer-column" aria-label="À propos de GourmeTech">
+                <h2>À propos de GourmeTech</h2>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d’un projet pédagogique.</p>
+            </aside>
+        </div>
+        <p class="footer-copyright">© 2025 GourmeTech - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
